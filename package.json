@@ -1,0 +1,27 @@
+{
+  "name": "java-random",
+  "version": "0.1.0",
+  "description": "A partial implementation of java.util.Random for JS",
+  "main": "lib/",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raybellis/java-random.git"
+  },
+  "keywords": [
+    "java",
+    "random",
+    "prng"
+  ],
+  "author": "Ray Bellis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raybellis/java-random/issues"
+  },
+  "homepage": "https://github.com/raybellis/java-random#readme"
+}
