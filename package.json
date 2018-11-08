@@ -1,6 +1,6 @@
 {
   "name": "java-random",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A partial implementation of java.util.Random for JS",
   "main": "lib/",
   "directories": {
