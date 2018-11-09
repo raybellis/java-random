@@ -1,8 +1,8 @@
 JavaRandom
 ==========
 
-A (partial) implementation of the `java.util.Random` PRNG from J2SE
-in JavaScript, designed to so far as possible produce the same output
+A (partial) implementation in JavaScript of the `java.util.Random`
+PRNG from J2SE, designed to so far as possible produce the same output
 sequences as the JavaScript original when supplied with the same seed.
 
 usage:
@@ -14,11 +14,13 @@ usage:
 methods implemented are:
 
     nextInt()
-    nextInt(int bound);
-    nextBoolean();
-    nextFloat();
-    nextDouble();
-    doubles(streamSize);
+    nextInt(bound)
+    nextBoolean()
+    nextFloat()
+    nextDouble()
+
+    doubles()
+    doubles(streamSize)
 
 The functions that in Java return a `Stream` are replaced with JS
 generator functions.
