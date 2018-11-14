@@ -85,6 +85,23 @@ describe('JavaRandom', function() {
 		});
 	});
 
+	describe('#nextGaussian', function() {
+		it('should match Java output', function() {
+			const expected = [
+				 0.8746788966462123,  -0.9193443348656242,
+				 1.1329921492850181,  -0.4598256884904446,
+				 0.7338090601305023,   0.4427877081455783,
+				-0.23610812307264825,  0.4619622460418042,
+				-0.19304784617121043, -0.02331125940413,
+			];
+
+			r.setSeed(10);
+			for (let i = 0; i < 10; ++i) {
+				assert.equal(r.nextGaussian(), expected[i]);
+			}
+		});
+	});
+
 	describe('#nextLong', function() {
 		it('should match Java output', function() {
 			const expected = [
