@@ -33,6 +33,26 @@ describe('JavaRandom', function() {
 		});
 	});
 
+	describe('#nextInt(n) [n = 2^x]', function() {
+		it('should match Java output', function() {
+			const expected = [
+				56, 51, 17, 36, 24, 48, 35, 46,
+				37, 50, 21, 35, 39, 33, 37, 23,
+				 4,  5, 40, 40, 16, 18,  5, 36,
+				15,  5, 18, 18,  2, 18, 24, 10,
+				 3,  0, 12, 16, 10,  8, 11, 13,
+				 9,  1,  9,  1, 18,  9, 10, 12,
+				11, 13, 10,  2,  8,  0,  3,  1,
+				 6,  0,  2,  3,  0,  1
+			];
+
+			r.setSeed(7937);
+			for (let i = 63, j = 0; i > 1; --i, ++j) {
+				assert.equal(r.nextInt(i), expected[j]);
+			}
+		});
+	});
+
 	describe('#nextFloat', function() {
 		it('should match Java output', function() {
 			const expected = [
