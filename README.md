@@ -28,6 +28,10 @@ methods implemented are:
 The functions that in Java return a `Stream` are replaced with JS
 generator functions.
 
-Functions that handle `long` types are not yet implemented, since
-support for a native 64-bit integer variable in JS (`BigInt`) is
-not yet ubiquitous.
+The Java functions that generate `long` values are not available
+except on JS platforms that are able to return a 64-bit `BigInt`
+instead of a `Number`:
+
+    nextLong()
+    longs()
+    longs(streamSize)
