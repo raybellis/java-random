@@ -9,7 +9,7 @@ describe('JavaRandom', function() {
 		it('should match Java output', function() {
 			const expected = [
 				-1155869325,  431529176,  1761283695, 1749940626,   892128508,
-	  			155629808, 1429008869, -1465154083, -138487339, -1242363800
+				155629808, 1429008869, -1465154083, -138487339, -1242363800
 			];
 
 			r.setSeed(1);
@@ -84,7 +84,19 @@ describe('JavaRandom', function() {
 		});
 	});
 
-	describe('#*doubles', function() {
+	describe('#*ints(streamSize)', function() {
+		it('should match Java output', function() {
+			const expected = [
+				-1155869325,  431529176,  1761283695, 1749940626,   892128508,
+				155629808, 1429008869, -1465154083, -138487339, -1242363800
+			];
+
+			r.setSeed(1);
+			assert.deepEqual(expected, Array.from(r.ints(10)));
+		});
+	});
+
+	describe('#*doubles(streamSize)', function() {
 		it('should match Java output', function() {
 			const expected = [
 				0.7297136425657874, 0.6141579720626675,

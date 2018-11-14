@@ -19,6 +19,9 @@ methods implemented are:
     nextFloat()
     nextDouble()
 
+    ints()
+    ints(streamSize)
+
     doubles()
     doubles(streamSize)
 
