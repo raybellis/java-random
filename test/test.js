@@ -85,6 +85,20 @@ describe('JavaRandom', function() {
 		});
 	});
 
+	describe('#nextBytes', function() {
+		it('should match Java output', function() {
+			const expected = [
+				-99,  -20,  -7, -69, 26,
+				 99, -109, -32,   9, 30,
+			];
+
+			let a = new Array(10);
+			r.setSeed(255);
+			r.nextBytes(a);
+			assert.deepEqual(expected, a);
+		});
+	});
+
 	describe('#nextGaussian', function() {
 		it('should match Java output', function() {
 			const expected = [
